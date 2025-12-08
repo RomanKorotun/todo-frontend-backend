@@ -4,3 +4,7 @@
    git clone <url-репозиторію>
 2. Встановіть залежності: yarn install
 3. Запустіть сервер: yarn start
+4. Сервер доступний за адресою: http://localhost:3001/api
+5. Роути:
+   - GET http://localhost:3001/api/task → отримати список задач;
+   - POST http://localhost:3001/api/task → додати нову задачу
