@@ -19,4 +19,9 @@ export class TaskService {
     this.tasks.push(newTask);
     return newTask;
   }
+
+  remove(id: number) {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+    return id;
+  }
 }
