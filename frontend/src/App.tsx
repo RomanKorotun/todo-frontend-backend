@@ -14,7 +14,7 @@ function App() {
     const getAll = async () => {
       try {
         setError(null);
-        const { data } = await axios.get(`${BACKEND_URL}/api/task`);
+        const { data } = await axios.get(`${BACKEND_URL}/api/tasks`);
         setTasks(data);
       } catch {
         setError("Не вдалося завантажити список задач");
@@ -25,7 +25,7 @@ function App() {
 
   const addTask = async (text: string) => {
     try {
-      const { data } = await axios.post(`${BACKEND_URL}/api/task`, { text });
+      const { data } = await axios.post(`${BACKEND_URL}/api/tasks`, { text });
       setTasks((prevState) => [...prevState, data]);
     } catch {
       console.log("Error");
@@ -35,7 +35,7 @@ function App() {
   const removeTask = async (id: number) => {
     try {
       const { data: deletedId } = await axios.delete(
-        `${BACKEND_URL}/api/task/${id}`
+        `${BACKEND_URL}/api/tasks/${id}`
       );
       setTasks((prevState) =>
         prevState.filter((task) => task.id !== deletedId)

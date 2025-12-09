@@ -16,8 +16,8 @@
 4. Сервер доступний за адресою:
    http://localhost:3001
 5. Роути:
-   - GET http://localhost:3001/api/task → отримати список задач;
-   - POST http://localhost:3001/api/task → додати нову задачу
+   - GET http://localhost:3001/api/tasks → отримати список задач;
+   - POST http://localhost:3001/api/tasks → додати нову задачу
 
 ---
 
